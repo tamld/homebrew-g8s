@@ -1,0 +1,13 @@
+name: Region probe for release asset endpoint
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe web endpoint from US runner
+        run: |
+          for i in 1 2 3; do
+            curl -sI --max-time 30 https://github.com/tamld/g8s/releases/download/v0.23.0/g8s_0.23.0_darwin_all.tar.gz | head -1 || true
+          done
+          curl -sI --max-time 30 https://github.com/tamld/g8s/releases/download/v0.23.0/checksums.txt | head -1 || true
