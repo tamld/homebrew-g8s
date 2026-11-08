@@ -27,7 +27,7 @@ class G8s < Formula
   end
 
   def install
-    binary.install "g8s"
+    bin.install "g8s"
   end
 
   def caveats
