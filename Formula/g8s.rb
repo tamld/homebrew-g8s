@@ -1,7 +1,7 @@
 class G8s < Formula
   desc "Zero-Trust Process & Capability Harness for AI Agents"
   homepage "https://github.com/tamld/g8s"
-  version "0.26.0"
+  version "0.27.1"
   license "MIT"
 
   livecheck do
@@ -12,17 +12,17 @@ class G8s < Formula
   on_macos do
     # darwin_all is a fat/universal binary covering both Intel and Apple Silicon.
     url "https://github.com/tamld/g8s/releases/download/v#{version}/g8s_#{version}_darwin_all.tar.gz"
-    sha256 "480e7f46b51962b44eb94a264f4db2ad46c78ba3c92cbf3e7ddce7c1544147d3" # darwin_all universal
+    sha256 "7d7dad60cad9ad7daa7b3358bf90a6030c0f6e8b1fb8651e9ac57c315bb758e2" # darwin_all universal
   end
 
   on_linux do
     on_intel do
       url "https://github.com/tamld/g8s/releases/download/v#{version}/g8s_#{version}_linux_amd64.tar.gz"
-      sha256 "e682dd43d899c5ca6c4f8ff8cd11b6063d18ddec00e824933c79161ea784772f" # linux amd64
+      sha256 "a82ebb2db62b89a13f947051fa1737c81dbdf2cab4a8c4df4147e2625188f27c" # linux amd64
     end
     on_arm do
       url "https://github.com/tamld/g8s/releases/download/v#{version}/g8s_#{version}_linux_arm64.tar.gz"
-      sha256 "58b2f8bf305402ad9a288f078bab23118439d8f002b16fc715d632886dc90d29" # linux arm64
+      sha256 "81ead239fa3cb41a1345695984747ec7201d46a9fa5c565d6c8badf3c4ff20f4" # linux arm64
     end
   end
 
